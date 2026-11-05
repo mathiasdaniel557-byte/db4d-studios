@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Db4D Studio | Designed Before Design</title>
+  <meta name="description" content="Db4D Studio is an independent creative studio making AI-assisted video, motion graphics and brand storytelling.">
+
+  <!-- Tab icon: the studio logo (assets/images/logo.png) -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Fonts: Instrument Sans (body, headings) + Instrument Serif (italic accent).
+       If they fail to load, the fallbacks in styles.css take over. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+
+  <!-- Icon sprite: drawn once here, reused with <use href="#icon-name">.
+       All icons are single-colour, so they follow the text colour. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </symbol>
+    <symbol id="icon-email" viewBox="0 0 24 24">
+      <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+    </symbol>
+    <symbol id="icon-chevron-left" viewBox="0 0 24 24">
+      <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </symbol>
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24">
+      <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =========================================================
+       HEADER + NAVIGATION
+       ========================================================= -->
+  <header class="site-header">
+    <a class="site-header__brand" href="#top" aria-label="Db4D Studio, back to top">
+      <img class="site-header__logo" src="assets/images/logo.png" alt="" width="40" height="40">
+      <span>Db4D Studio</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Opens the contact pop-up -->
+    <button type="button" class="btn btn--primary" data-contact-open aria-haspopup="dialog" aria-controls="contact-dialog">
+      Let’s chat
+    </button>
+  </header>
+
+  <main id="main">
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+
+      <!-- "Create" and "Visuals" in sans, "Impactful" in italic serif -->
+      <h1 id="hero-title" class="hero__title">
+        <span class="hero__word hero__word--sans">Create</span>
+        <span class="hero__word hero__word--serif">Impactful</span>
+        <span class="hero__word hero__word--sans">Visuals</span>
+      </h1>
+
+      <div class="hero__intro">
+        <p>Creative visuals and purposeful storytelling, built with intention.</p>
+
+        <div class="hero__contact">
+          <p>Contact us</p>
+          <ul>
+            <!-- js/main.js fills in these links from the SETTINGS at its top -->
+            <li>
+              <a class="icon-btn" href="#contact" data-contact="whatsapp" aria-label="Contact us on WhatsApp">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a class="icon-btn" href="#contact" data-contact="email" aria-label="Contact us by email">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-email"></use></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hero visual: the chrome 3D image or loop goes here -->
+     <figure class="hero__visual" data-media="hero-visual">
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster="assets/images/hero-visual.jpg"
+  >
+    <source src="assets/video/hero-loop.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+					</figure>
+
+      <div class="hero__services">
+        <h2 class="hero__label">What we offer</h2>
+        <ul class="hero__offers">
+          <li>AI-assisted video</li>
+          <li>Brand storytelling</li>
+          <li>Motion graphics</li>
+          <li>Campaign concepts</li>
+          <li>3D motion visuals</li>
+        </ul>
+        <a class="btn" href="#services">Explore our creative services</a>
+      </div>
+
+      <!-- Featured: tapping the thumbnail opens a larger view (see #featured-dialog) -->
+      <div class="hero__featured">
+        <p>Featured</p>
+        <button type="button" class="hero__thumb-btn" data-featured-open aria-haspopup="dialog" aria-controls="featured-dialog" aria-label="Enlarge the featured ad: Giant Wallet, Fiat to Crypto">
+          <img src="assets/images/featured.jpg" alt="Frame from the Giant Wallet Fiat to Crypto video">
+        </button>
+        <p>Story-led promo ad</p>
+        <p>Fiat to Crypto · Published by Giant Wallet</p>
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="Scroll to the About section">Scroll</a>
+    </section>
+
+
+    <!-- =========================================================
+         ABOUT / THE STUDIO
+         ========================================================= -->
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <h2 id="about-title">About the studio</h2>
+      <div class="about__text">
+        <p>Db4D Studio is an independent creative studio making video, motion graphics and campaign visuals for brands. We develop the concept, direct every sequence and refine each frame until it is right.</p>
+        <p>The name stands for Designed before Design. Our belief is that the original Designer came first, and that human creativity is at its best when it learns from the order, beauty and intention already present in creation. So our work starts with purpose, not decoration.</p>
+        <p>AI is one of the tools in our process. The direction, the corrections and the final quality are ours.</p>
+      </div>
+      <figure class="about__media">
+        <img src="assets/images/logo.png" alt="Db4D Studio logo">
+      </figure>
+    </section>
+
+
+    <!-- =========================================================
+         MEET THE CREATOR (hidden until the intro video exists)
+         To switch it on: save the video as assets/video/intro.mp4,
+         add a poster image assets/images/intro-poster.jpg,
+         write the one-line intro, then delete the word "hidden"
+         from the <section> tag below.
+         ========================================================= -->
+    <section id="creator" class="section creator" aria-labelledby="creator-title" hidden>
+      <h2 id="creator-title">Meet the creator</h2>
+      <p>[Placeholder: one line introducing you and what the video covers]</p>
+      <video class="creator__video" controls controlslist="nodownload noplaybackrate" disablepictureinpicture playsinline preload="none"
+             poster="assets/images/intro-poster.jpg" src="assets/video/intro.mp4"
+             aria-label="Introduction from the creator of Db4D Studio"></video>
+    </section>
+
+
+    <!-- =========================================================
+         SERVICES
+         ========================================================= -->
+    <section id="services" class="section services" aria-labelledby="services-title">
+      <h2 id="services-title">Services</h2>
+      <p>Creative production for brands that want their message seen clearly: concept, direction, production and finishing in one place.</p>
+
+      <ul class="services__list">
+        <li class="service">
+          <h3>AI-assisted video production</h3>
+          <p>Short films and ads built with AI tools, directed scene by scene and refined by hand for consistency and quality.</p>
+        </li>
+        <li class="service">
+          <h3>Cinematic brand storytelling</h3>
+          <p>Story-led videos that introduce a brand through character, setting and one clear idea, with sound designed to match.</p>
+        </li>
+        <li class="service">
+          <h3>Promotional and advertising videos</h3>
+          <p>Focused promos that explain an offer and give viewers a clear next step.</p>
+        </li>
+        <li class="service">
+          <h3>Motion graphics</h3>
+          <p>Animated text, interfaces and brand visuals, carefully timed and paired with sound to hold attention.</p>
+        </li>
+        <li class="service">
+          <h3>3D-style motion visualisation</h3>
+          <p>Dimensional product and interface visuals that make complex ideas easy to follow.</p>
+        </li>
+        <li class="service">
+          <h3>Product demonstrations</h3>
+          <p>Clear walkthroughs that show how a product or app works, one screen at a time.</p>
+        </li>
+        <li class="service">
+          <h3>Promotional graphics and carousels</h3>
+          <p>Campaign graphics and swipeable carousels designed for social feeds.</p>
+        </li>
+        <li class="service">
+          <h3>Creative direction and concept development</h3>
+          <p>Turning a brief into a visual concept, mood and storyboard before production begins, including campaign ideas.</p>
+        </li>
+      </ul>
+    </section>
+
+
+    <!-- =========================================================
+         SELECTED WORK
+         Titles lead with the type of ad; the brand comes second.
+         Short preview in assets/video, full video on Google Drive.
+         ========================================================= -->
+    <section id="projects" class="section projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Selected work</h2>
+      <p>A mix of work made for Giant Wallet and self-initiated concept pieces. Each project is labelled, so you always know which is which.</p>
+
+      <div class="projects__grid">
+
+        <article class="project">
+          <video class="project__video" controls controlslist="nodownload noplaybackrate" disablepictureinpicture playsinline preload="metadata"
+                 src="assets/video/giantAd.mp4#t=0.1"
+                 aria-label="Preview: Cinematic brand story for Giant Wallet"></video>
+          <h3>Cinematic brand story</h3>
+          <p class="project__status">Giant Wallet · Made for Giant Wallet</p>
+          <p>A giant arrives in a village carrying the Giant Wallet flag to end failed P2P transactions. A villager is the first to be transformed, others follow, and the flag is planted at the village centre to mark a new beginning. Suits brands introducing a new product or movement to a community. Full video: 2:19.</p>
+          <a class="btn project__link" href="https://drive.google.com/file/d/188GuSSPHiCaDsNcU-tMEds5eNYFzKDej/view" target="_blank" rel="noopener noreferrer"
+             aria-label="Watch the full video: Cinematic brand story (opens Google Drive in a new tab)">Watch full video</a>
+        </article>
+
+        <article class="project">
+          <video class="project__video" controls controlslist="nodownload noplaybackrate" disablepictureinpicture playsinline preload="metadata"
+                 src="assets/video/HelioPrimeAd.mp4#t=0.1"
+                 aria-label="Preview: Cinematic product ad for Helio Prime"></video>
+          <h3>Cinematic product ad</h3>
+          <p class="project__status">Helio Prime · Concept work</p>
+          <p>A satirical sci-fi commercial for a fictional sunscreen brand, with disaster-movie spectacle, a deadpan product pitch and a jingle. Suits consumer products that want a bold, memorable launch. Full video: 0:40.</p>
+          <a class="btn project__link" href="https://drive.google.com/file/d/1bK5HZCJxuANhk11qjond9Frrz1fqV0V9/view" target="_blank" rel="noopener noreferrer"
+             aria-label="Watch the full video: Cinematic product ad (opens Google Drive in a new tab)">Watch full video</a>
+        </article>
+
+        <article class="project">
+          <video class="project__video" controls controlslist="nodownload noplaybackrate" disablepictureinpicture playsinline preload="metadata"
+                 src="assets/video/StarryGoldAd.mp4#t=0.1"
+                 aria-label="Preview: Presenter-led promo ad for Starry Gold"></video>
+          <h3>Presenter-led promo ad</h3>
+          <p class="project__status">Starry Gold · Concept work</p>
+          <p>A presenter speaks directly to the audience about Starry Gold, a fictional company selling recorded language tutorials, and announces a discounted 19-in-1 video bundle. Suits offers, courses and announcements that need a personal, direct voice. Full video: 0:38.</p>
+          <a class="btn project__link" href="https://drive.google.com/file/d/13aq-cQxKXoqdZScgmD85gblyawe0J4u3/view" target="_blank" rel="noopener noreferrer"
+             aria-label="Watch the full video: Presenter-led promo ad (opens Google Drive in a new tab)">Watch full video</a>
+        </article>
+
+        <article class="project">
+          <video class="project__video" controls controlslist="nodownload noplaybackrate" disablepictureinpicture playsinline preload="metadata"
+                 src="assets/video/packngoAd.mp4#t=0.1"
+                 aria-label="Preview: Lifestyle product ad for Pack and Go"></video>
+          <h3>Lifestyle product ad</h3>
+          <p class="project__status">Pack and Go · Concept work</p>
+          <p>A voiceover-led ad for a fictional luxury bag brand. The camera follows a woman as she hangs her bag, then shows the range of bags, a laptop slotting in, and students waving at the camera. Suits physical products that sell through everyday use. Full video: 1:26.</p>
+          <a class="btn project__link" href="https://drive.google.com/file/d/1snX5ho-XkC3swCNxYWczgoZBppF8S7P6/view" target="_blank" rel="noopener noreferrer"
+             aria-label="Watch the full video: Lifestyle product ad (opens Google Drive in a new tab)">Watch full video</a>
+        </article>
+
+        <article class="project">
+          <video class="project__video" controls controlslist="nodownload noplaybackrate" disablepictureinpicture playsinline preload="metadata"
+                 src="assets/video/3dmg.mp4#t=0.1"
+                 aria-label="Preview: 3D motion graphics ad for Giant Wallet"></video>
+          <h3>3D motion graphics ad</h3>
+          <p class="project__status">Giant Wallet · Made for Giant Wallet</p>
+          <p>A 3D motion-graphics walkthrough of the Giant Wallet app, turning its screens into a clear, polished product demonstration. Suits apps and fintech products that need to show how they work. Full video: 1:39.</p>
+          <a class="btn project__link" href="https://drive.google.com/file/d/1Vi0Cr0ryPzRTbYZ1Ur_t6gC9_PYmWabN/view" target="_blank" rel="noopener noreferrer"
+             aria-label="Watch the full video: 3D motion graphics ad (opens Google Drive in a new tab)">Watch full video</a>
+        </article>
+
+      </div>
+
+      <!-- Carousel ad: swipe on phones, arrows and a soft edge fade on wide screens -->
+      <article class="carousel-ad" aria-labelledby="carousel-title">
+        <div class="carousel-ad__head">
+          <h3 id="carousel-title">Carousel ad</h3>
+          <p class="project__status">Giant Wallet · Made for Giant Wallet</p>
+          <p>Five swipeable slides built for the X feed, each carrying one clear idea. Suits fintech and crypto brands, courses and offers that explain a few points in a scroll-friendly format.</p>
+        </div>
+
+        <div class="slider" role="region" aria-roledescription="carousel" aria-label="Giant Wallet carousel ad, 5 slides">
+          <button type="button" class="slider__arrow slider__arrow--prev" data-slider-dir="prev" aria-label="Previous slides">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-left"></use></svg>
+          </button>
+
+          <div class="slider__track" tabindex="0">
+            <img class="slider__slide" src="assets/images/1stframe.jpg" alt="Giant Wallet carousel ad, slide 1 of 5" width="896" height="1200" loading="lazy">
+            <img class="slider__slide" src="assets/images/2ndframe.jpg" alt="Giant Wallet carousel ad, slide 2 of 5" width="896" height="1200" loading="lazy">
+            <img class="slider__slide" src="assets/images/3rdframe.jpg" alt="Giant Wallet carousel ad, slide 3 of 5" width="896" height="1200" loading="lazy">
+            <img class="slider__slide" src="assets/images/4thframe.jpg" alt="Giant Wallet carousel ad, slide 4 of 5" width="896" height="1200" loading="lazy">
+            <img class="slider__slide" src="assets/images/5thframe.jpg" alt="Giant Wallet carousel ad, slide 5 of 5" width="896" height="1200" loading="lazy">
+          </div>
+
+          <button type="button" class="slider__arrow slider__arrow--next" data-slider-dir="next" aria-label="Next slides">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-right"></use></svg>
+          </button>
+        </div>
+      </article>
+    </section>
+
+
+    <!-- =========================================================
+         OUR APPROACH
+         ========================================================= -->
+    <section id="approach" class="section approach" aria-labelledby="approach-title">
+      <h2 id="approach-title">Our approach</h2>
+      <p>Every project follows the same path: a clear concept, careful production and a finish we are willing to put our name on.</p>
+
+      <ol class="approach__steps">
+        <li>
+          <h3>Concept</h3>
+          <p>We start with the idea: the message, the audience, the story and the look, planned before anything is produced.</p>
+        </li>
+        <li>
+          <h3>Production</h3>
+          <p>Scenes are directed and built with a mix of AI tools and manual craft, with every shot chosen on purpose.</p>
+        </li>
+        <li>
+          <h3>Refinement and delivery</h3>
+          <p>Logos, text and small details are corrected by hand, then the piece is edited, sound-designed and checked before delivery.</p>
+        </li>
+      </ol>
+    </section>
+
+
+    <!-- =========================================================
+         BEHIND THE DESIGN (hidden until the making-of videos exist)
+         To switch it on: save each video in assets/video, copy the
+         <article> template below once per video, fill in the text and
+         file name, then delete the word "hidden" from the <section> tag.
+         ========================================================= -->
+    <section id="behind" class="section behind" aria-labelledby="behind-title" hidden>
+      <h2 id="behind-title">Behind the Design</h2>
+      <p>[Placeholder: one line about how these projects are made]</p>
+
+      <div class="behind__grid">
+        <!--
+        <article class="project">
+          <video class="project__video" controls controlslist="nodownload noplaybackrate" disablepictureinpicture playsinline preload="metadata"
+                 src="assets/video/YOUR-FILE.mp4#t=0.1" aria-label="Making of: PROJECT NAME"></video>
+          <h3>Making of: PROJECT NAME</h3>
+          <p>[What this video shows. Length: 0:00.]</p>
+        </article>
+        -->
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         PACKAGES AND PARTNERSHIPS
+         data-price feeds the WhatsApp / email message for each package.
+         ========================================================= -->
+    <section id="packages" class="section packages" aria-labelledby="packages-title">
+      <h2 id="packages-title">Packages and partnerships</h2>
+      <p>Choose the package closest to your project, or ask for a custom one. Scope is agreed before work begins. Prices are in US dollars, and the naira amount is quoted at the day’s exchange rate.</p>
+
+      <div class="packages__grid">
+
+        <article class="package" data-package="Starter" data-price="From $50">
+          <h3>Starter</h3>
+          <p>A focused promotional graphic or carousel for a single campaign.</p>
+          <ul>
+            <li>Concept and visual direction</li>
+            <li>One promotional graphic or one carousel of up to 5 slides</li>
+            <li>Files sized for social media</li>
+            <li>2 rounds of revisions</li>
+          </ul>
+          <p class="package__price">From $50</p>
+          <button type="button" class="btn" data-contact-open data-package-enquiry="Starter" aria-haspopup="dialog" aria-controls="contact-dialog">Enquire about Starter</button>
+        </article>
+
+        <article class="package" data-package="Growth" data-price="From $120">
+          <h3>Growth</h3>
+          <p>A short promotional or storytelling video for a product, offer or announcement.</p>
+          <ul>
+            <li>Concept, script and storyboard</li>
+            <li>One video of up to 30 seconds</li>
+            <li>Motion graphics, editing and sound design</li>
+            <li>2 rounds of revisions</li>
+          </ul>
+          <p class="package__price">From $120</p>
+          <button type="button" class="btn" data-contact-open data-package-enquiry="Growth" aria-haspopup="dialog" aria-controls="contact-dialog">Enquire about Growth</button>
+        </article>
+
+        <article class="package" data-package="Creative Plus" data-price="From $250">
+          <h3>Creative Plus</h3>
+          <p>A cinematic advertisement or longer brand story with full creative direction.</p>
+          <ul>
+            <li>Full concept development and storyboard</li>
+            <li>One cinematic video of up to 60 seconds</li>
+            <li>Brand-asset correction, compositing and sound design</li>
+            <li>2 rounds of revisions</li>
+          </ul>
+          <p class="package__price">From $250</p>
+          <button type="button" class="btn" data-contact-open data-package-enquiry="Creative Plus" aria-haspopup="dialog" aria-controls="contact-dialog">Enquire about Creative Plus</button>
+        </article>
+
+        <article class="package" data-package="Custom" data-price="Quoted per project">
+          <h3>Custom</h3>
+          <p>For complex work such as 3D-style product demonstrations or multi-part campaigns.</p>
+          <ul>
+            <li>A conversation to define the scope</li>
+            <li>A quote based on complexity and length</li>
+            <li>Revision limits agreed before work starts</li>
+          </ul>
+          <p class="package__price">Quoted per project</p>
+          <button type="button" class="btn" data-contact-open data-package-enquiry="Custom" aria-haspopup="dialog" aria-controls="contact-dialog">Enquire about Custom</button>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         FINAL CONTACT
+         ========================================================= -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Get in touch</h2>
+      <p>Have an idea, a product to launch or a story to tell? Send a message and let’s shape it together.</p>
+
+      <ul class="contact__methods">
+        <li>
+          <a class="icon-btn icon-btn--lg" href="#" data-contact="whatsapp" aria-label="Message us on WhatsApp">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a class="icon-btn icon-btn--lg" href="#" data-contact="email" aria-label="Send us an email">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-email"></use></svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Db4D Studio</p>
+    <a class="btn btn--primary" href="#top">Back to top</a>
+  </footer>
+
+
+  <!-- =========================================================
+       FEATURED POP-UP: larger view + link to the X post
+       ========================================================= -->
+  <dialog id="featured-dialog" class="featured-dialog" aria-labelledby="featured-dialog-title">
+    <h2 id="featured-dialog-title">Story-led promo ad</h2>
+    <p class="featured-dialog__meta">Giant Wallet: Fiat to Crypto · Published by Giant Wallet</p>
+    <img src="assets/images/featured.jpg" alt="Frame from the Giant Wallet Fiat to Crypto video">
+    <p>Two people, one checklist. One spends the day on identity verification at an on-ramp office and never finishes. The other completes every task from home and buys his crypto with Giant Wallet. Suits products that need a clear before-and-after contrast.</p>
+    <div class="featured-dialog__actions">
+      <a class="btn btn--primary" href="https://x.com/TheGiantWallet/status/2114701405290156084" target="_blank" rel="noopener noreferrer"
+         aria-label="Watch the full video on Giant Wallet’s X page (opens in a new tab)">Watch full video</a>
+      <button type="button" class="btn" data-featured-close>Close</button>
+    </div>
+  </dialog>
+
+
+  <!-- =========================================================
+       CONTACT POP-UP
+       ========================================================= -->
+  <dialog id="contact-dialog" class="contact-dialog" aria-labelledby="contact-dialog-title">
+    <h2 id="contact-dialog-title">How would you like to reach us?</h2>
+    <p class="contact-dialog__context" id="contact-dialog-context" hidden></p>
+
+    <ul class="contact-dialog__options">
+      <li>
+        <a href="#" data-contact="whatsapp">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>
+          <span class="contact-dialog__label">WhatsApp</span>
+          <span class="contact-dialog__note">Opens a chat with a message you can edit</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-contact="email">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-email"></use></svg>
+          <span class="contact-dialog__label">Email</span>
+          <span class="contact-dialog__note">Opens your email app with a message you can edit</span>
+        </a>
+      </li>
+    </ul>
+
+    <button type="button" class="btn" data-contact-close>Close</button>
+  </dialog>
+
+</body>
+</html>
